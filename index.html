@@ -3,254 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ShadiVerse | Royal Wedding Invitation</title>
-<link rel="stylesheet" href="style.css">
+<title>ShadiVerse | Royal Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= GLOBAL ================= */
+
+body{
+    margin:0;
+    height:100vh;
+    overflow:hidden;
+    font-family:'Cinzel',serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: radial-gradient(circle at center,#6b0000,#3a0000);
+}
+
+/* ================= GOLD STRIP ================= */
+
+.gold-strip{
+    position:absolute;
+    width:14px;
+    height:100%;
+    background:linear-gradient(to bottom,#ffd700,#b8860b,#ffd700);
+    left:50%;
+    transform:translateX(-50%);
+    box-shadow:0 0 25px gold;
+}
+
+/* ================= MAIN WRAPPER ================= */
+
+.wrapper{
+    position:relative;
+    text-align:center;
+    z-index:2;
+}
+
+/* ================= SANSKRIT SLOGAN ================= */
+
+.sanskrit{
+    font-size:1.3rem;
+    color:gold;
+    margin-bottom:40px;
+    min-height:40px;
+}
+
+/* ================= INVITE CARD ================= */
+
+.invite-card{
+    background:rgba(90,0,0,0.9);
+    padding:60px 100px;
+    border:2px solid gold;
+    position:relative;
+}
+
+.script{
+    font-family:'Great Vibes',cursive;
+    font-size:2.5rem;
+    color:gold;
+    margin-bottom:20px;
+}
+
+.names{
+    font-size:4rem;
+    color:white;
+    margin-bottom:40px;
+}
+
+/* ================= BUTTON ================= */
+
+.open-btn{
+    padding:15px 40px;
+    background:transparent;
+    border:2px solid gold;
+    color:gold;
+    cursor:pointer;
+    letter-spacing:2px;
+    transition:0.3s;
+}
+
+.open-btn:hover{
+    background:gold;
+    color:#5b0000;
+}
+
+.tap{
+    margin-top:20px;
+    font-size:0.9rem;
+    color:#ddd;
+}
+
+</style>
 </head>
+
 <body>
 
-<audio id="bellSound" src="song.mp3"></audio>
+<div class="gold-strip"></div>
 
+<div class="wrapper">
 
-<!-- ================= MAIN CONTENT ================= -->
-<div class="main-content" id="mainContent">
-
-    
-
-
-<!-- ================= HERO SECTION ================= -->
-    <section class="hero">
-
-        <div class="hero-overlay"></div>
-    
-        <div class="hero-content">
-    
-            <div class="om">ॐ</div>
-    
-            <p class="families">TOGETHER WITH OUR FAMILIES</p>
-    
-            <h1 class="couple">Aarav & Diya</h1>
-    
-            <p class="invite-text">
-                Invite you to join us in the celebration of our love
-            </p>
-    
-            <div class="date-line">
-                <span>DECEMBER 12, 2026</span>
-            </div>
-    
-            <p class="location">UDAIPUR, RAJASTHAN</p>
-    
-        </div>
-    
-    </section>
-
-<!-- ================= WEDDING EVENTS ================= -->
-<section class="wedding-events">
-
-    <h2 class="events-title">Wedding Events</h2>
-    <p class="events-subtitle">A celebration of love and tradition</p>
-
-    <div class="timeline">
-
-        <!-- Engagement -->
-        <div class="timeline-row">
-            <div class="timeline-content left">
-                <h3>The Engagement</h3>
-                <p>Dec 10, 2026 | 7:00 PM</p>
-                <span>Hotel Taj Lake Palace</span>
-                <div class="tag">RING CEREMONY</div>
-            </div>
-
-            <div class="timeline-icon"></div>
-
-            <div class="timeline-quote right">
-                <div class="quote-card">
-                    💍
-                    <p>"The beginning of forever."</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mehendi -->
-        <div class="timeline-row">
-            <div class="timeline-quote left">
-                <div class="quote-card">
-                    ✋
-                    <p>"Color of love on hands."</p>
-                </div>
-            </div>
-
-            <div class="timeline-icon"></div>
-
-            <div class="timeline-content right">
-                <h3>Mehendi Ceremony</h3>
-                <p>Dec 11, 2026 | 11:00 AM</p>
-                <span>Poolside, The Oberoi Udaivilas</span>
-                <div class="tag">HENNA & FOLK SONGS</div>
-            </div>
-        </div>
-
-        <!-- Sangeet -->
-        <div class="timeline-row">
-            <div class="timeline-content left">
-                <h3>Sangeet Night</h3>
-                <p>Dec 11, 2026 | 8:00 PM</p>
-                <span>Grand Ballroom, Udaivilas</span>
-                <div class="tag">DANCE & MUSIC</div>
-            </div>
-
-            <div class="timeline-icon"></div>
-
-            <div class="timeline-quote right">
-                <div class="quote-card">
-                    🎵
-                    <p>"Dance the night away!"</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Wedding -->
-        <div class="timeline-row highlight">
-            <div class="timeline-quote left">
-                <div class="quote-card gold">
-                    🕊
-                    <p>"The Royal Union."</p>
-                </div>
-            </div>
-
-            <div class="timeline-icon heart"></div>
-
-            <div class="timeline-content right">
-                <h3>The Wedding</h3>
-                <p>Dec 12, 2026 | 5:00 PM</p>
-                <span>Jagmandir Island Palace</span>
-                <div class="tag">PHERAS & RECEPTION</div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- ================= BLESSINGS ================= -->
-<section class="blessings-section">
-    <div class="blessing-card">
-        <h2>Blessings From</h2>
-
-        <div class="parents">
-            <h4>Groom's Parents</h4>
-            <p>Mr. Rajesh & Mrs. Sunita Sharma</p>
-
-            <h4>Bride's Parents</h4>
-            <p>Mr. Vikram & Mrs. Anjali Mehta</p>
-
-            <p class="grandparents">And Grandparents</p>
-        </div>
-    </div>
-</section>
-
-<!-- ================= OUR STORY ================= -->
-<section class="our-story">
-
-    <h2 class="story-title">Our Story</h2>
-    <div class="gold-line"></div>
-
-    <div class="story-wrapper">
-
-        <div class="person">
-            <img src="groom.png" alt="Groom">
-            <h3 class="name">Aarav</h3>
-            <p class="quote">"The moment I saw her, I knew my search was over."</p>
-        </div>
-
-        <div class="heart">❤</div>
-
-        <div class="person">
-            <img src="bride.png" alt="Bride">
-            <h3 class="name">Diya</h3>
-            <p class="quote">"In him, I found my love, my best friend, and my home."</p>
-        </div>
-
+    <!-- Sanskrit Slogan -->
+    <div class="sanskrit">
+        <span id="typedSanskrit"></span>
     </div>
 
-    <div class="story-description">
-        <span id="typedStory">   
-        Love is not just about finding the right person, but creating
-        the right relationship. It's not about how much love you have
-        in the beginning but how much love you build until the end.
-        We are starting our forever, and we want you to be part of it.
-        </span>
+    <!-- Invite Box -->
+    <div class="invite-card">
+        <h3 class="script">You Are Invited</h3>
+        <h1 class="names">Aarav & Diya</h1>
+
+        <button class="open-btn" onclick="goToHome()">
+            OPEN INVITATION
+        </button>
+
+        <p class="tap">Tap to begin the celebration</p>
     </div>
 
-</section>
-
-<audio id="bgMusic" src="music.mp3" loop autoplay></audio>
-
-<!-- ================= RSVP SECTION ================= -->
-<section class="rsvp-section">
-
-    <div class="rsvp-card">
-
-        <div class="rsvp-icon">✉</div>
-
-        <h2>RSVP</h2>
-        <p class="rsvp-sub">
-            Please confirm your presence by November 1st
-        </p>
-
-        <form>
-
-            <label>FULL NAME</label>
-            <input type="text" placeholder="Enter your name">
-
-            <label>NUMBER OF GUESTS</label>
-            <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-            </select>
-
-            <label>ATTENDING?</label>
-
-            <div class="radio-group">
-                <label>
-                    <input type="radio" name="attend" checked>
-                    Joyfully Accepts
-                </label>
-
-                <label>
-                    <input type="radio" name="attend">
-                    Regretfully Declines
-                </label>
-            </div>
-
-        </form>
-
-        <!-- WhatsApp Button (UNCHANGED) -->
-        <a href="https://wa.me/916393846037?text=I%20am%20excited%20to%20attend%20your%20wedding!"
-           target="_blank"
-           class="whatsapp-btn">
-           Confirm via WhatsApp 💬
-        </a>
-
-    </div>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-
-    <h3>Aarav & Diya</h3>
-
-    <p class="hashtag">#AARAVDIYAWEDDING</p>
-
-    <p class="credit">
-        Designed with ❤️ for the special day
-    </p>
-    <p> 2026 Shadiverse ©</p>
-</footer>
 </div>
+<audio id="bellSound" src="bell.mp3"></audio>
 
-<script src="script.js"></script>
+
+<script>
+
+/* ================= SANSKRIT TYPING + BELL ================= */
+
+const text = "मांगल्यं तन्तुनानेन धारणीयं मम जीवने। त्वं जीव शरदः शतम्॥";
+const target = document.getElementById("typedSanskrit");
+const bell = document.getElementById("bellSound");
+
+let index = 0;
+
+function typeSanskrit(){
+    if(index < text.length){
+        target.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeSanskrit, 60);
+    }
+}
+
+window.onload = function(){
+    // Play bell sound
+    bell.play().catch(()=>{});
+    
+    // Start typing
+    typeSanskrit();
+};
+function goToHome(){
+    bell.play();
+    setTimeout(()=>{
+        window.location.href = "home.html";
+    },800);
+} 
+
+/* ================= REDIRECT ================= */
+
+function goToHome(){
+    window.location.href = "index.html";
+}
+
+</script>
+
 </body>
 </html>
+
