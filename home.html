@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShadiVerse | Royal Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= GLOBAL ================= */
+
+body{
+    margin:0;
+    height:100vh;
+    overflow:hidden;
+    font-family:'Cinzel',serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: radial-gradient(circle at center,#6b0000,#3a0000);
+}
+
+/* ================= GOLD STRIP ================= */
+
+.gold-strip{
+    position:absolute;
+    width:14px;
+    height:100%;
+    background:linear-gradient(to bottom,#ffd700,#b8860b,#ffd700);
+    left:50%;
+    transform:translateX(-50%);
+    box-shadow:0 0 25px gold;
+}
+
+/* ================= MAIN WRAPPER ================= */
+
+.wrapper{
+    position:relative;
+    text-align:center;
+    z-index:2;
+}
+
+/* ================= SANSKRIT SLOGAN ================= */
+
+.sanskrit{
+    font-size:1.3rem;
+    color:gold;
+    margin-bottom:40px;
+    min-height:40px;
+}
+
+/* ================= INVITE CARD ================= */
+
+.invite-card{
+    background:rgba(90,0,0,0.9);
+    padding:60px 100px;
+    border:2px solid gold;
+    position:relative;
+}
+
+.script{
+    font-family:'Great Vibes',cursive;
+    font-size:2.5rem;
+    color:gold;
+    margin-bottom:20px;
+}
+
+.names{
+    font-size:4rem;
+    color:white;
+    margin-bottom:40px;
+}
+
+/* ================= BUTTON ================= */
+
+.open-btn{
+    padding:15px 40px;
+    background:transparent;
+    border:2px solid gold;
+    color:gold;
+    cursor:pointer;
+    letter-spacing:2px;
+    transition:0.3s;
+}
+
+.open-btn:hover{
+    background:gold;
+    color:#5b0000;
+}
+
+.tap{
+    margin-top:20px;
+    font-size:0.9rem;
+    color:#ddd;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="gold-strip"></div>
+
+<div class="wrapper">
+
+    <!-- Sanskrit Slogan -->
+    <div class="sanskrit">
+        <span id="typedSanskrit"></span>
+    </div>
+
+    <!-- Invite Box -->
+    <div class="invite-card">
+        <h3 class="script">You Are Invited</h3>
+        <h1 class="names">Aarav & Diya</h1>
+
+        <button class="open-btn" onclick="goToHome()">
+            OPEN INVITATION
+        </button>
+
+        <p class="tap">Tap to begin the celebration</p>
+    </div>
+
+</div>
+<audio id="bellSound" src="bell.mp3"></audio>
+
+
+<script>
+
+/* ================= SANSKRIT TYPING + BELL ================= */
+
+const text = "मांगल्यं तन्तुनानेन धारणीयं मम जीवने। त्वं जीव शरदः शतम्॥";
+const target = document.getElementById("typedSanskrit");
+const bell = document.getElementById("bellSound");
+
+let index = 0;
+
+function typeSanskrit(){
+    if(index < text.length){
+        target.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeSanskrit, 60);
+    }
+}
+
+window.onload = function(){
+    // Play bell sound
+    bell.play().catch(()=>{});
+    
+    // Start typing
+    typeSanskrit();
+};
+function goToHome(){
+    bell.play();
+    setTimeout(()=>{
+        window.location.href = "home.html";
+    },800);
+} 
+
+/* ================= REDIRECT ================= */
+
+function goToHome(){
+    window.location.href = "index.html";
+}
+
+</script>
+
+</body>
+</html>
