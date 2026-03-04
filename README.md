@@ -3,6 +3,7 @@
 
 A luxury, cinematic Indian wedding invitation website built with HTML, CSS, and JavaScript.
 
+Live demo https://shadiverse.netlify.app
 ---
 
 ## ✨ Features
